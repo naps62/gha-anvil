@@ -1,3 +1,5 @@
 FROM ghcr.io/foundry-rs/foundry
 
-ENTRYPOINT ["anvil", "--host", "0.0.0.0"]
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["entrypoint.sh"]
